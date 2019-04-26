@@ -1,0 +1,42 @@
+<html>
+<head>
+	<link rel="shortcut icon" href="omega.jpg" style="width:15px;height:15px;">
+
+	<img src="omega.jpg"  >
+<style type="text/css">
+	div {
+   
+    width: 800px;
+    border: 3px solid blue;
+    border-color: pink;
+    padding: 25px;
+    margin: 25px;
+    height: 300px;
+
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: pink;
+}
+</style>
+</head>
+<body>
+                {% for doctor in doctors %}
+                <h1>{{doctor.name}}</h1>
+                <p>{{doctor.qualifications}}<br>
+                    {{doctor.designation}}<br>
+                    {{doctor.speciality}}<br>
+                    {{doctor.location}}
+                </p>
+                {% endfor %}
+</body>
+</html>

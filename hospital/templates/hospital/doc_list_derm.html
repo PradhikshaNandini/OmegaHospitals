@@ -1,0 +1,105 @@
+<html>
+<head>
+	<link rel="shortcut icon" href="/static/omega.jpg" style="width:15px;height:15px;">
+	<img src="/static/omega.jpg"  >
+<style type="text/css">
+	.Dermatology{
+   
+    width: 800px;
+    border: 3px solid blue;
+    border-color: pink;
+    padding: 25px;
+    margin: 25px;
+    height: 300px;
+
+}
+
+.ENT{
+    width: 800px;
+    border: 3px solid blue;
+    border-color: #CD5C5C;
+    padding: 25px;
+    margin: 25px;
+    height: 300px;
+
+}
+
+.Cardiology{
+    width: 800px;
+    border: 3px solid blue;
+    border-color: #A04000
+    padding: 25px;
+    margin: 25px;
+    height: 300px;
+
+}
+
+.Gynecology{
+    width: 800px;
+    border: 3px solid blue;
+    border-color: #884EA0;
+    padding: 25px;
+    margin: 25px;
+    height: 300px;
+
+}
+.Neurology{
+    width: 800px;
+    border: 3px solid blue;
+    border-color: #D35400;
+    padding: 25px;
+    margin: 25px;
+    height: 300px;
+
+}
+.Oncology{
+    width: 800px;
+    border: 3px solid blue;
+    border-color: #117A65;
+    padding: 25px;
+    margin: 25px;
+    height: 300px;
+
+}
+
+.Pediatrics{
+    width: 800px;
+    border: 3px solid blue;
+    border-color: #008080;
+    padding: 25px;
+    margin: 25px;
+    height: 300px;
+
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: pink;
+}
+
+</style>
+</head>
+<body>
+                
+                {% for doctor in doctors %}
+                <div class="{{doctor.speciality}}">
+                <h1>{{doctor.name}}</h1>
+                <p>Qualifications:{{doctor.qualifications}}<br>
+                    Designation:{{doctor.designation}}<br>
+                    Speciality:{{doctor.speciality}}<br>
+                    Location:{{doctor.location}}
+                </p>
+                </div>
+                {% endfor %}
+
+               <button class="button" onClick="location.href='create/'" >Book Appointment</button> 
+</body>
+</html>

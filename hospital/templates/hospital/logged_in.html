@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Logged in</title>
+</head>
+<body>
+		<h1> You are logged in</h1>
+		{% for user in users %}
+    		{{user.username}}
+  		{% endfor %}
+</body>
+</html>
